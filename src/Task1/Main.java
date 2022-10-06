@@ -12,8 +12,8 @@ public class Main {
         Car mustang = new Car("Ford", "Mustang", 1967, "Hardtop Sedan");
         mustang.setDriver(jack);
 
-        System.out.println(impala + "" + jack);
-        System.out.println(mustang + "" + jack);
+        System.out.println(impala + "" + impala.getDriver());
+        System.out.println(mustang + "" + mustang.getDriver());
     }
 
 
