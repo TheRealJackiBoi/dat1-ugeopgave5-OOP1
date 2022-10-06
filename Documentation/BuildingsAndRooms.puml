@@ -1,0 +1,29 @@
+@startuml
+
+object Room {
+    -int numberOfDoors
+    -int numberOfLamps
+    -int numberOfWindows
+
+    +Room(int numberOfDoors, int numberOfLamps, int numberOfWindows)
+}
+
+object Main {
+    +{static} main()
+    +{static} int countLampsInBuilding(Building building)
+    +{static} boolean isNormal(Building building)
+}
+
+object Building {
+    -final ArrayList<Room> rooms
+    -int numberOfBathrooms
+    -int numberOfFloors
+    -boolean isOfficeBuilding
+
+    +Building(ArrayList<Room> rooms, int numberOfBathrooms, int numberOfFloors, boolean isOfficeBuilding)
+}
+
+Main *-- Building
+Building *-- Room
+
+@enduml
